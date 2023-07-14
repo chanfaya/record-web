@@ -22,6 +22,9 @@ devDependencies:
   '@mdi/font':
     specifier: ^7.2.96
     version: 7.2.96
+  '@types/node':
+    specifier: ^20.4.2
+    version: 20.4.2
   '@vitejs/plugin-vue':
     specifier: ^4.2.3
     version: 4.2.3(vite@4.4.0)(vue@3.3.4)
@@ -33,7 +36,7 @@ devDependencies:
     version: 5.0.2
   vite:
     specifier: ^4.4.0
-    version: 4.4.0(less@4.1.3)
+    version: 4.4.0(@types/node@20.4.2)(less@4.1.3)
   vite-plugin-vuetify:
     specifier: ^1.0.2
     version: 1.0.2(vite@4.4.0)(vue@3.3.4)(vuetify@3.3.8)
@@ -249,6 +252,9 @@ packages:
     resolution: {integrity: sha512-e//lmkmpFUMZKhmCY9zdjRe4zNXfbOIJnn6xveHbaV2kSw5aJ5dLXUxcRt1Gxfi7ZYpFLUWlkG2MGSFAiqAu7w==}
     dev: true
 
+  /@types/node@20.4.2:
+    resolution: {integrity: sha512-Dd0BYtWgnWJKwO1jkmTrzofjK2QXXcai0dmtzvIBhcA+RsG5h8R3xlyta0kGOZRNfL9GuRtb1knmPEhQrePCEw==}
+
   /@vitejs/plugin-vue@4.2.3(vite@4.4.0)(vue@3.3.4):
     resolution: {integrity: sha512-R6JDUfiZbJA9cMiguQ7jxALsgiprjBeHL5ikpXfJCH62pPHtI+JdJ5xWj6Ev73yXSlYl86+blXn1kZHQ7uElxw==}
     engines: {node: ^14.18.0 || >=16.0.0}
@@ -256,7 +262,7 @@ packages:
       vite: ^4.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 4.4.0(less@4.1.3)
+      vite: 4.4.0(@types/node@20.4.2)(less@4.1.3)
       vue: 3.3.4
     dev: true
 
@@ -762,13 +768,13 @@ packages:
       '@vuetify/loader-shared': 1.7.1(vue@3.3.4)(vuetify@3.3.8)
       debug: 4.3.4
       upath: 2.0.1
-      vite: 4.4.0(less@4.1.3)
+      vite: 4.4.0(@types/node@20.4.2)(less@4.1.3)
       vuetify: 3.3.8(typescript@5.0.2)(vite-plugin-vuetify@1.0.2)(vue@3.3.4)
     transitivePeerDependencies:
       - supports-color
       - vue
 
-  /vite@4.4.0(less@4.1.3):
+  /vite@4.4.0(@types/node@20.4.2)(less@4.1.3):
     resolution: {integrity: sha512-Wf+DCEjuM8aGavEYiF77hnbxEZ+0+/jC9nABR46sh5Xi+GYeSvkeEFRiVuI3x+tPjxgZeS91h1jTAQTPFgePpA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -796,6 +802,7 @@ packages:
       terser:
         optional: true
     dependencies:
+      '@types/node': 20.4.2
       esbuild: 0.18.12
       less: 4.1.3
       postcss: 8.4.25

@@ -1,19 +1,9 @@
 import { createApp } from 'vue'
 import './style/index.less'
-import { createVuetify } from 'vuetify'
 import App from './App.vue'
-
-// Translations provided by Vuetify
-import { pl, zhHans } from 'vuetify/locale'
+import { registerPlugins } from '@/plugins'
 
 const app = createApp(App)
 
-const vuetify = createVuetify({
-  locale: {
-    locale: 'zhHans',
-    messages: { zhHans, pl },
-  },
-})
-
-app.use(vuetify)
+registerPlugins(app)
 app.mount('#app')

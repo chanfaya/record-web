@@ -3,7 +3,9 @@
 
 <template>
   <div>
-    1111111111
+    <v-btn prepend-icon="$vuetify">
+  Button
+</v-btn>
   </div>
 </template>
 
